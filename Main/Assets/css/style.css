@@ -131,7 +131,7 @@ h2{
 }
 
 /* Work Links section style*/
-.work-links {
+.work-links{
   flex: 1 0 0;
   display: flex;
   flex-wrap: wrap;
@@ -144,32 +144,42 @@ h2{
   position: relative;
 }
 /* Work Image style*/
+.work-links a{
+  flex: 1 0 0;
+}
 .work-links img {
   width: 100%;
-  min-width: 350px;
+  min-width: 200px;
+  max-height: 300px;
   opacity: .5;
 }
 /* Image text for work images */
 .work-links .img-head{
   position: absolute;
-  bottom: 50px;
+  bottom: 40px;
   left: 0px;
   text-align: left;
   display: block;
   background: var(--headerback);
   color: var(--headerfontcolor);
 }
-h6 {
-  font-size: 20px;
+.work-links:hover img {
+  opacity:1;
+}
+h4 {
+  font-size: 25px;
   font-weight: bold; 
   background: var(--headerback);
   color: var(--headerfontcolor);
+  margin: 10px 0px;
 }
-h7 {
+h5 {
+  font-style: italic;
   font-size: 15px;
   font-weight: bold; 
   background: var(--headerback);
   color: var(--headerfontcolor);
+  margin: 10px 0px;
 }
 
 /* Contact */

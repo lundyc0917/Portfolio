@@ -1,98 +1,160 @@
 * {
-    box-sizing: border-box;
-    background: whitesmoke;
-  }
-  :root {
-    --bkgrnd:rgb(70, 70, 70);
-  }
+  box-sizing: border-box;
+  background: whitesmoke;
+}
+:root {
+  --bkgrnd:rgb(70, 70, 70);
+  --boarder:rgb(0, 0, 80);
+  --headercolor:rgb(4, 0, 80);
+  --headerback: lightskyblue;
+  --subheadfont: 30px;
+}
   
-  body {
-    font-family: Arial;
-    margin: 0;
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-    justify-content: flex-start;
-  }
+body {
+  font-family: Arial;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  justify-content: flex-start;
+}
   
-  header {
-    padding: 40px;
-    text-align: Left;
-  }
+header {
+  padding: 40px;
+  text-align: Left;
+}
 
- .main-header {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    padding: 60px;
-    background: var(--bkgrnd);
-    
-  }
+.main-header {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 60px;
+  background: var(--bkgrnd); 
+}
 
-  h1{
-    font-size: 48px;
-    font-weight: 600;
-    background: var(--bkgrnd);
-  }
+h1{
+  font-size: 48px;
+  font-weight: 600;
+  background: var(--bkgrnd);
+}
 
-  h2{
-    font-size: 30px;
-    font-weight: 600;
-  }
+h2{
+  font-size: 48px;
+  font-weight: 600;
+  min-inline-size: 200px;
+}
   
+nav {
+  display: flex;
+  background-color: var(--bkgrnd);
+}
+  
+nav a {
+  font-size: 25px;
+  color: #0070d8;
+  font-weight: 600;
+  padding: 14px 20px;
+  text-decoration: none;
+  text-align: center;    
+  background-color: var(--bkgrnd);
+}
+  
+.head-img {
+  height: 200px;
+  width: 100%;
+  background-image: url("../images/header.jpg");
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+.head-img h4 {
+  position: absolute;
+  padding: 2px 2px;
+  background: var(--headerback);
+  color: var(--headercolor);
+  bottom: 8px;
+  right: 8px;
+  font-size: var(--subheadfont);
+}
+main {
+  display: flex;
+  flex-wrap: wrap;
+  flex-grow: 1;
+}
+  
+.float-left {
+  float: left;
+  margin-right: 25px;
+  text-align: right;
+}
+
+.about-section,
+.work-section,
+.contact-section{
+  margin-bottom: 20px;
+  padding: 50px;
+  width: 100%;
+  height: auto;
+  flex: 0 0 auto;
+  display: flex;
+}
+.vl {
+  border-left: 4px solid var(--boarder);
+  border-left-style: groove;
+  position: relative;
+  margin-left: -15px;
+  top: 0;
+  padding-left: 25px;
+}
+.about-section img{
+  float: left;
+  padding: 0 10px;
+}
+/* Container for the work section of the page */
+.work-section div{
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.work-links .img-head{
+  position: absolute;
+  padding: 2px 2px;
+  background: var(--headerback);
+  color: var(--headercolor);
+  bottom: 8px;
+  left: 0px;
+  font-size: 20px;
+  font-weight: bold;
+}
+.work-links .img-head p {
+  font-size: 10px;
+}
+.work-links {
+  flex: 1 0 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  text-align:  center;
+  border-style: solid;
+  border-width: 1px;
+  margin: 2px;
+  position: relative;
+}
+.work-links img {
+  width: 100%;
+  min-width: 350px;
+  opacity: .5;
+}
+.contact-section a {
+  font-size: 25px;
+  font-weight: 600;
+  padding: 14px 20px;
+  text-decoration: none;
+  text-align: center;    
+}  
+
+@media screen and (max-width: 768px) {
   nav {
-    display: flex;
-    background-color: var(--bkgrnd);
+    flex-direction: row;
   }
-  
-  nav a {
-    font-size: 25px;
-    color: #0070d8;
-    font-weight: 600;
-    padding: 14px 20px;
-    text-decoration: none;
-    text-align: center;    
-    background-color: var(--bkgrnd);
-  }
-  
-  .head-img {
-    height: 200px;
-    width: 100%;
-    background-image: url("../images/header.jpg");
-    background-size: cover;
-    background-position: center;
 }
-  main {
-    display: flex;
-    flex-wrap: wrap;
-    flex-grow: 1;
-  }
-  
-  .float-left {
-    float: left;
-    margin-right: 25px;
-}
-  .card {
-    margin-bottom: 20px;
-    padding: 50px;
-    width: 100%;
-  }
-  .work-links {
-    flex: 1 1 auto;
-    padding: 20px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-  }
-  
-  img {
-    inline-size: auto;
-    padding: 10px;
-  }
-
-  @media screen and (max-width: 768px) {
-    main,
-    nav {
-      flex-direction: row;
-    }
-  }

@@ -44,7 +44,6 @@ nav a {
   color: #0070d8;
   font-weight: 600;
   padding: 14px 20px;
-  text-decoration: none;
   text-align: center;    
   background-color: var(--bkgrnd);
   text-decoration: underline;
@@ -76,13 +75,13 @@ main {
 }
 
 /* section main container */
-.about-section,
-.work-section,
-.contact-section{
+.about,
+.work,
+.contact {
   margin-bottom: 20px;
   padding: 50px 0px;
   width: 100%;
-  min-height: 300px;
+ /* min-height: 300px;*/
   flex: 0 0 auto;
   display: flex;
 }
@@ -91,7 +90,8 @@ main {
 h2{
   font-size: 48px;
   font-weight: 600;
-  min-inline-size: 325px;
+  min-inline-size: 300px;
+  max-inline-size: 300px;
   word-wrap: normal;
   float: left;
   margin-right: 25px;
@@ -106,38 +106,28 @@ h2{
   margin-left: -15px;
   top: 0;
   padding-left: 25px;
-  text-overflow: wrap;
 }
 
 /* Section Specific Styles */
 /*---------------------------------------------*/
 
 /* Image style in about me section */
-.about-section img{
+.about img{
   float: left;
   padding: 0 10px;
 }
-
+/* paragraph style in about me section */
+.about p {
+  font-size: 20px;
+}
 
 /* Container for the work section of the page */
-.work-section div{
+.work div{
   display: flex;
   flex-wrap: wrap;
 }
 
-.work-links .img-head{
-  position: absolute;
-  padding: 2px 2px;
-  background: var(--headerback);
-  color: var(--headerfontcolor);
-  bottom: 8px;
-  left: 0px;
-  font-size: 20px;
-  font-weight: bold;
-}
-.work-links .img-head p {
-  font-size: 10px;
-}
+/* Work Links section style*/
 .work-links {
   flex: 1 0 0;
   display: flex;
@@ -150,27 +140,43 @@ h2{
   margin: 2px;
   position: relative;
 }
+/* Work Image style*/
 .work-links img {
   width: 100%;
   min-width: 350px;
   opacity: .5;
 }
-.contact-section div nav {
-  display: flex;
+/* Image text for work images */
+.work-links .img-head{
+  position: absolute;
+  padding: 2px 2px;
+  background: var(--headerback);
+  color: var(--headerfontcolor);
+  bottom: 8px;
+  left: 0px;
+  font-size: 20px;
+  font-weight: bold;
 }
-.contact-section div nav a {
+
+/* Contact */
+/*.contact div nav {
+  display: flex;
+}*/
+.contact div {
   font-size: 25px;
   font-weight: 600;
   padding: 14px 20px;
-  text-decoration: none;
   text-align: center;    
   text-decoration: underline;
+  display: flex;
+  flex: 1 0 auto;
+  justify-content: space-evenly;
 }
 
 footer {
   font-size: 25px;
   min-height: 30px;
-  
+  text-align: center;
 }
 
 @media screen and (max-width: 768px) {

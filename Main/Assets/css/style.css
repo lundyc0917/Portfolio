@@ -34,6 +34,11 @@
     font-weight: 600;
     background: var(--bkgrnd);
   }
+
+  h2{
+    font-size: 30px;
+    font-weight: 600;
+  }
   
   nav {
     display: flex;
@@ -41,12 +46,12 @@
   }
   
   nav a {
-    font-size: 30px;
-    color: #13293d;
+    font-size: 25px;
+    color: #0070d8;
     font-weight: 600;
     padding: 14px 20px;
     text-decoration: none;
-    text-align: right;    
+    text-align: center;    
     background-color: var(--bkgrnd);
   }
   

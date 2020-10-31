@@ -3,11 +3,10 @@
   background: whitesmoke;
 }
 :root {
-  --bkgrnd:rgb(70, 70, 70);
-  --boarder:rgb(0, 0, 80);
-  --headerfontcolor:rgb(4, 0, 80);
-  --headerback: lightskyblue;
-  --subheadfont: 30px;
+  --bkgrnd:rgb(49, 52, 61);
+  --boarder:rgb(69, 89, 118);
+  --headerfontcolor:rgb(49, 51, 61);
+  --headerback: rgb(146, 203, 205);
 }
 /* body */
 body {
@@ -25,28 +24,31 @@ header {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  padding: 60px;
+  padding: 40px;
   background: var(--bkgrnd); 
 }
 /* Main Page header */
 h1{
   font-size: 50px;
   font-weight: 600;
-  background: var(--bkgrnd);
+  background: var(--headerback);
+  padding: 15px;
+  color: var(--headerfontcolor);
 }
 /* Navigation */
 nav {
   display: flex;
-  background-color: var(--bkgrnd);
+  background-color: var(--headerback);
 }
 nav a {
   font-size: 25px;
-  color: #0070d8;
+  color:var(--headerback);
   font-weight: 600;
   padding: 14px 20px;
   text-align: center;    
   background-color: var(--bkgrnd);
   text-decoration: underline;
+  flex: 1 0 auto;
 }
 /* main */
 main {
@@ -64,14 +66,14 @@ main {
   background-position: center;
   position: relative;
 }
-.head-img h4 {
+.head-img h3 {
   position: absolute;
-  padding: 2px 2px;
+  padding: 15px;
   background: var(--headerback);
   color: var(--headerfontcolor);
   bottom: 8px;
   right: 8px;
-  font-size: var(--subheadfont);
+  font-size: 45px;
 }
 
 /* section main container */
@@ -96,12 +98,13 @@ h2{
   float: left;
   margin-right: 25px;
   text-align: right;
+  color: var(--headerfontcolor);
 }
 
 /* Verticle Line */
 .vl {
-  border-left: 4px solid var(--boarder);
-  border-left-style: groove;
+  border-left: 6px solid var(--boarder);
+  border-left-style: solid;
   position: relative;
   margin-left: -15px;
   top: 0;
@@ -149,13 +152,24 @@ h2{
 /* Image text for work images */
 .work-links .img-head{
   position: absolute;
-  padding: 2px 2px;
+  bottom: 50px;
+  left: 0px;
+  text-align: left;
+  display: block;
   background: var(--headerback);
   color: var(--headerfontcolor);
-  bottom: 8px;
-  left: 0px;
+}
+h6 {
   font-size: 20px;
-  font-weight: bold;
+  font-weight: bold; 
+  background: var(--headerback);
+  color: var(--headerfontcolor);
+}
+h7 {
+  font-size: 15px;
+  font-weight: bold; 
+  background: var(--headerback);
+  color: var(--headerfontcolor);
 }
 
 /* Contact */
@@ -181,6 +195,16 @@ footer {
 
 @media screen and (max-width: 768px) {
   nav {
-    flex-direction: row;
+    flex-direction: Column;
   }
-}
+  header {
+    width: 100%;
+  }
+  .about,
+  .work,
+  .contact,
+  .contact div {
+    width: 100%;
+    flex-direction: column; 
+  }
+  }

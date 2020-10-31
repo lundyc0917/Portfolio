@@ -5,11 +5,11 @@
 :root {
   --bkgrnd:rgb(70, 70, 70);
   --boarder:rgb(0, 0, 80);
-  --headercolor:rgb(4, 0, 80);
+  --headerfontcolor:rgb(4, 0, 80);
   --headerback: lightskyblue;
   --subheadfont: 30px;
 }
-  
+/* body */
 body {
   font-family: Arial;
   margin: 0;
@@ -18,37 +18,27 @@ body {
   min-height: 100vh;
   justify-content: flex-start;
 }
-  
+/* header */
 header {
   padding: 40px;
   text-align: Left;
-}
-
-.main-header {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
   padding: 60px;
   background: var(--bkgrnd); 
 }
-
+/* Main Page header */
 h1{
-  font-size: 48px;
+  font-size: 50px;
   font-weight: 600;
   background: var(--bkgrnd);
 }
-
-h2{
-  font-size: 48px;
-  font-weight: 600;
-  min-inline-size: 200px;
-}
-  
+/* Navigation */
 nav {
   display: flex;
   background-color: var(--bkgrnd);
 }
-  
 nav a {
   font-size: 25px;
   color: #0070d8;
@@ -57,8 +47,16 @@ nav a {
   text-decoration: none;
   text-align: center;    
   background-color: var(--bkgrnd);
+  text-decoration: underline;
 }
-  
+/* main */
+main {
+  display: flex;
+  flex-wrap: wrap;
+  flex-grow: 1;
+}
+
+/* Header image and subheading */
 .head-img {
   height: 200px;
   width: 100%;
@@ -71,33 +69,36 @@ nav a {
   position: absolute;
   padding: 2px 2px;
   background: var(--headerback);
-  color: var(--headercolor);
+  color: var(--headerfontcolor);
   bottom: 8px;
   right: 8px;
   font-size: var(--subheadfont);
 }
-main {
+
+/* section main container */
+.about-section,
+.work-section,
+.contact-section{
+  margin-bottom: 20px;
+  padding: 50px 0px;
+  width: 100%;
+  min-height: 300px;
+  flex: 0 0 auto;
   display: flex;
-  flex-wrap: wrap;
-  flex-grow: 1;
 }
   
-.float-left {
+/* section main header */
+h2{
+  font-size: 48px;
+  font-weight: 600;
+  min-inline-size: 325px;
+  word-wrap: normal;
   float: left;
   margin-right: 25px;
   text-align: right;
 }
 
-.about-section,
-.work-section,
-.contact-section{
-  margin-bottom: 20px;
-  padding: 50px;
-  width: 100%;
-  height: auto;
-  flex: 0 0 auto;
-  display: flex;
-}
+/* Verticle Line */
 .vl {
   border-left: 4px solid var(--boarder);
   border-left-style: groove;
@@ -105,11 +106,19 @@ main {
   margin-left: -15px;
   top: 0;
   padding-left: 25px;
+  text-overflow: wrap;
 }
+
+/* Section Specific Styles */
+/*---------------------------------------------*/
+
+/* Image style in about me section */
 .about-section img{
   float: left;
   padding: 0 10px;
 }
+
+
 /* Container for the work section of the page */
 .work-section div{
   display: flex;
@@ -120,7 +129,7 @@ main {
   position: absolute;
   padding: 2px 2px;
   background: var(--headerback);
-  color: var(--headercolor);
+  color: var(--headerfontcolor);
   bottom: 8px;
   left: 0px;
   font-size: 20px;
@@ -136,7 +145,8 @@ main {
   justify-content: center;
   text-align:  center;
   border-style: solid;
-  border-width: 1px;
+  border-width: 5px;
+  border-color: var(--headerback);
   margin: 2px;
   position: relative;
 }
@@ -145,13 +155,23 @@ main {
   min-width: 350px;
   opacity: .5;
 }
-.contact-section a {
+.contact-section div nav {
+  display: flex;
+}
+.contact-section div nav a {
   font-size: 25px;
   font-weight: 600;
   padding: 14px 20px;
   text-decoration: none;
   text-align: center;    
-}  
+  text-decoration: underline;
+}
+
+footer {
+  font-size: 25px;
+  min-height: 30px;
+  
+}
 
 @media screen and (max-width: 768px) {
   nav {

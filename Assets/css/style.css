@@ -132,13 +132,40 @@ h2{
 
 /* Work Links section style*/
 #spotlight {
-  flex: 1 0 0;
+  flex: 1 1 auto;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   text-align:  center;
+  border-style: solid;
+  border-width: 5px;
+  border-color: var(--headerback);
+  margin: 2px;
   position: relative;
 }
+#spotlight a{
+  flex: 1 0 0;
+}
+#spotlight img {
+  width: 100%;
+  min-width: 200px;
+  max-height: 300px;
+  opacity: .5;
+}
+/* Image text for work images */
+#spotlight .img-head{
+  position: absolute;
+  bottom: 40px;
+  left: 0px;
+  text-align: left;
+  display: block;
+  background: var(--headerback);
+  color: var(--headerfontcolor);
+}
+#spotlight:hover img {
+  opacity:1;
+}
+
 .work-links{
   flex: 1 0 0;
   display: flex;

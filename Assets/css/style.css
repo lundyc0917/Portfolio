@@ -3,10 +3,10 @@
   background: whitesmoke;
 }
 :root {
-  --bkgrnd:rgb(49, 52, 61);
+  --bkgrnd:rgb(13,33,44);
   --boarder:rgb(69, 89, 118);
   --headerfontcolor:rgb(49, 51, 61);
-  --headerback: rgb(146, 203, 205);
+  --headerback: rgb(0, 179, 196);
 }
 /* body */
 body {
@@ -24,21 +24,23 @@ header {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
-  padding: 40px;
-  background: var(--bkgrnd); 
+  background-image: url("../images/header-2.jpg");
+  background-size: cover;
+  background-position: center;
+  position: relative;
 }
 /* Main Page header */
 h1{
   font-size: 50px;
   font-weight: 600;
-  background: var(--headerback);
+  background-color: transparent;
   padding: 15px;
-  color: var(--headerfontcolor);
+  color:var(--headerback);
 }
 /* Navigation */
 nav {
   display: flex;
-  background-color: var(--headerback);
+  background-color: transparent;
 }
 nav a {
   font-size: 25px;
@@ -46,7 +48,7 @@ nav a {
   font-weight: 600;
   padding: 14px 20px;
   text-align: center;    
-  background-color: var(--bkgrnd);
+  background-color: transparent;  
   text-decoration: underline;
   flex: 1 0 auto;
 }
@@ -59,9 +61,9 @@ main {
 
 /* Header image and subheading */
 .head-img {
-  height: 200px;
+  height: 100px;
   width: 100%;
-  background-image: url("../images/header.jpg");
+  background: transparent;
   background-size: cover;
   background-position: center;
   position: relative;
@@ -69,8 +71,8 @@ main {
 .head-img h3 {
   position: absolute;
   padding: 15px;
-  background: var(--headerback);
-  color: var(--headerfontcolor);
+  background: transparent;
+  color:var(--headerback);
   bottom: 8px;
   right: 8px;
   font-size: 45px;
@@ -142,15 +144,19 @@ h2{
   border-color: var(--headerback);
   margin: 2px;
   position: relative;
+  width: 100%;
+  
 }
-#spotlight a{
+#spotlight #link{
   flex: 1 0 0;
+  background-image: linear-gradient(to right, rgb(0, 179, 196), rgb(23,15,75), rgb(208, 0, 215));
+  opacity:.75;
 }
 #spotlight img {
-  width: 100%;
+  width: auto;
   min-width: 200px;
   max-height: 300px;
-  opacity: .5;
+  
 }
 /* Image text for work images */
 #spotlight .img-head{
@@ -161,13 +167,21 @@ h2{
   display: block;
   background: var(--headerback);
   color: var(--headerfontcolor);
+  padding-right: 20px;
 }
-#spotlight:hover img {
+
+
+#spotlight:hover img,
+#spotlight:hover a {
   opacity:1;
 }
 
+#row {
+  width: 100%;
+}
+
 .work-links{
-  flex: 1 0 0;
+  flex: 1 1 0;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -179,14 +193,16 @@ h2{
   position: relative;
 }
 /* Work Image style*/
-.work-links a{
-  flex: 1 0 0;
+.work-links #link{
+  flex: 1 1 0;
+  background-image: linear-gradient(to right, rgb(0, 179, 196), rgb(23,15,75), rgb(208, 0, 215));
+  opacity: .75;
+
 }
 .work-links img {
-  width: 100%;
+  max-width: 100%;
   min-width: 200px;
   max-height: 300px;
-  opacity: .5;
 }
 /* Image text for work images */
 .work-links .img-head{
@@ -197,10 +213,13 @@ h2{
   display: block;
   background: var(--headerback);
   color: var(--headerfontcolor);
+  padding-right: 20px;
 }
-.work-links:hover img {
+.work-links:hover img,
+.work-links:hover a {
   opacity:1;
 }
+
 h4 {
   font-size: 25px;
   font-weight: bold; 
@@ -217,10 +236,16 @@ h5 {
   margin: 10px 0px;
 }
 
+#githubLinks{
+  font-style: italic;
+  font-weight: bold;
+  font-size: 15px;
+  background: var(--headerback);
+  color: var(--headerfontcolor);
+}
+
 /* Contact */
-/*.contact div nav {
-  display: flex;
-}*/
+
 .contact div {
   font-size: 25px;
   font-weight: 600;

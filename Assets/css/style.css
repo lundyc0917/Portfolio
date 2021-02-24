@@ -1,6 +1,6 @@
 * {
   box-sizing: border-box;
-  background: whitesmoke;
+  background: rgb(167, 167, 167);
 }
 :root {
   --bkgrnd:rgb(13,33,44);

@@ -176,7 +176,7 @@ h2{
   opacity:1;
 }
 
-#row {
+.row {
   width: 100%;
 }
 
@@ -193,7 +193,7 @@ h2{
   position: relative;
 }
 /* Work Image style*/
-.work-links #link{
+.work-links .link{
   flex: 1 1 0;
   background-image: linear-gradient(to right, rgb(0, 179, 196), rgb(23,15,75), rgb(208, 0, 215));
   opacity: .75;
@@ -236,7 +236,7 @@ h5 {
   margin: 10px 0px;
 }
 
-#githubLinks{
+.githubLinks{
   font-style: italic;
   font-weight: bold;
   font-size: 15px;
